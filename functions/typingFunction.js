@@ -1,12 +1,3 @@
-let i = 0
-let j = 0
-
-
-
-const titleEl = document.querySelector('.typing-title')
-const textEl = document.querySelector('.text-content')
-
-
 async function typeLorem() {
 
     var i = 0
@@ -19,7 +10,7 @@ async function typeLorem() {
         }, 2000);
     }
     
-    const titleText = 'Lorem Ipsum.'
+    const titleText = "Yes, I'm Lucas."
     const contentText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores obcaecati laboriosam veniam quas ratione tempore quidem, dicta eveniet, ipsam eum sunt. Perferendis totam ipsam incidunt dolore, voluptatibus porro earum labore quasi? Quae minima debitis eaque dicta. Possimus nihil iusto iure dignissimos hic nesciunt at, eum numquam molestias tenetur, beatae quidem vero maxime nemo fugiat accusantium vitae libero! Aspernatur fuga provident qui. Suscipit, tempore consequatur. Aliquam inventore id magni. Explicabo repellendus delectus natus esse quas labore veritatis repudiandae, cum fugiat ipsa odit minus, maiores laborum molestias. Doloribus, in dicta illum inventore ducimus blanditiis adipisci temporibus odio minus. Recusandae assumenda pariatur delectus!'
   
     function loop() {

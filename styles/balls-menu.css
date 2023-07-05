@@ -1,0 +1,7 @@
+.ball {
+    transition: background-color 2s ease;
+}
+
+.ball:hover {
+    background-color: blue !important;
+}

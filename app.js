@@ -1,4 +1,6 @@
 import { execTyping } from "./functions/typingFunction.js";
+import { animateBoxes } from "./functions/animateBoxes.js";
+import { runOnScrollPosition } from './functions/runOnScrollPosition.js'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,13 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function initApp() {
-    console.log('APP IS INITIALIZED')   
+    console.log('APP IS INITIALIZED') 
+    var ranOnce = false  
+    showGoToTopButton()
+    
     window.onscroll = ()  => {
         console.log('scrolling')
-        showGoToTopButton()
         execTyping()
-
-        const btnScrollUp = document.getElementById('btn-top').addEventListener('click', scrollToTheTop)
+        
+        if (document.documentElement.scrollTop > 1800 && !ranOnce) {
+          animateBoxes()
+          ranOnce = true
+        }
+        // runOnScrollPosition(1500, animateBoxes)
+        // const btnScrollUp = document.getElementById('btn-top').addEventListener('click', scrollToTheTop)
       };
         
 }   
@@ -47,17 +56,10 @@ function showGoToTopButton() {
 
 }
 
-function scrollToTheTop() {
-    console.log('HI')
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
+// function scrollToTheTop() {
+//     console.log('HI')
+//     window.scrollTo({top: 0, behavior: 'smooth'});
+// }
 
 
 
-function oi() {
-    console.log('oi')
-}
-
-function uploadPages() {
-    
-}

@@ -2,7 +2,6 @@
 
 .parallax {
     background-image: url('../assets/mountains.jpg');
-    
     background-position: bottom;
     -webkit-background-position: bottom;
     background-size: cover;
@@ -45,22 +44,42 @@
 }
 
 .bottom-parallax {
+    padding: 20px;
     display: flex;
     z-index: 10;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 20%;
+    /* background-color: white; */
+    border-radius: 50%;
 }
+
+
 
 .rounded-container {
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    width: 50px;
+    height: 50px;
+    border: 5px solid white;
     margin: 15px;
     border-radius: 50%;
+    animation: 4s turnWhite infinite;
 
 }
+
+.rounded-container:first-child {
+    animation-delay: 1.8s;
+}
+
+@keyframes turnWhite {
+    0% {
+        opacity: 0;
+    } 50% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+}
+
+
 /* background-attachment: fixed; */

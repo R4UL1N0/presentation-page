@@ -1,0 +1,37 @@
+.page-three {
+    /* background-image: url('../assets/texture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    background-color: rgba(105, 107, 230, 0.5); */
+
+    background-color: black;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: moveAnimation;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveAnimation {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 100% {
+        top: calc(50% + var(--translate-y));
+        left: calc(50% + var(--translate-x));
+    }
+}
